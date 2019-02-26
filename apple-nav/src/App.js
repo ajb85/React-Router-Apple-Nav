@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import NavHeader from "./components/NavHeader";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
+import Home from "./components/Home";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <NavHeader />
-        </Router>
+        <NavHeader />
+        <Route exact path="/" component={Home} />
       </div>
     );
   }
