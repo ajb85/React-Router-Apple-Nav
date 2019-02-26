@@ -7,6 +7,7 @@ export default function NavHeader(props) {
   const subMenuSections = ["Mac", "iPad", "iPhone", "Watch", "TV", "Music"];
 
   const routes = subMenuSections.map(section => (
+    // Create URL routes to content for links to navigate to
     <Route
       path={`/${section.toLowerCase()}`}
       render={props => <SubNav {...props} />}
@@ -14,6 +15,7 @@ export default function NavHeader(props) {
   ));
 
   const links = subMenuSections.map(section => (
+    // Navigate to routes
     <NavLink to={`/${section.toLowerCase()}`} activeClassName={styles.active}>
       {section}
     </NavLink>
