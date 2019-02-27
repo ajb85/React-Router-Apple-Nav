@@ -27,7 +27,8 @@ export default function NavHeader(props) {
         <i className="far fa-search" />
         <i className="fal fa-shopping-bag" />
       </nav>
-      <section className="subNav">
+
+      <section className={styles.subnav}>
         <Route path="/:section" render={props => <SubNav {...props} />} />
       </section>
     </header>
