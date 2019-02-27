@@ -10,6 +10,11 @@ export default function NavHome(props) {
     tv: "TV",
     music: "Music"
   };
-  const section = library[props.match.params.section];
+  const params = props.match.params;
+  let section = library[params.section];
+  if (params.subsection) {
+    section = params.subsection;
+  }
+
   return <p className={styles.content}>{section} Content</p>;
 }
