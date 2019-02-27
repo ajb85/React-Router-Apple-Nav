@@ -27,8 +27,9 @@ export default class SubNav extends Component {
   }
   render() {
     const section = this.props.match.params.section;
+
     const subsections = this.state[section];
-    let links = JSON.stringify(subsections);
+    let links = []; //JSON.stringify(subsections);
     if (subsections.length) {
       links = subsections.map(subsection => (
         <div key={subsection} className={styles.link}>

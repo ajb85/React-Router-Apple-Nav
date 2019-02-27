@@ -10,10 +10,17 @@
     margin-bottom: 0;
     margin-top: 5px;
   }
+
+  &:hover {
+    p {
+      color: #1186c3;
+    }
+  }
 }
 
 .subnav {
   background-color: #fafafa;
   max-width: 900px;
   margin: auto;
+  align-items: baseline;
 }
